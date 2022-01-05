@@ -9,6 +9,9 @@ import {
 
 import theme from './ui/Theme'
 import Footer from "./ui/Footer";
+import LandingPage from "./ui/LandingPage";
+import Database from "./ui/Database";
+import Storage from "./ui/Storage";
 
 
 export default function App() {
@@ -21,15 +24,14 @@ export default function App() {
       <Router>
       <Header value={value} selectedIndex={selectedIndex} setValue={setValue} setSelectedIndex={setSelectedIndex}/>
         <Switch>
-          <Route exact path="/" component={() => {return <h2>Home</h2>}}/>
-          <Route exact path="/Products" component={() => {return <h2>Products</h2>}}/>
-          <Route exact path="/Mobiles" component={() => {return <h2>Mobiles</h2>}}/>
-          <Route exact path="/Laptops" component={() => {return <h2>Laptops</h2>}}/>
-          <Route exact path="/Televisions" component={() => {return <h2>Televisions</h2>}}/>
+          <Route exact path="/" component={() => <LandingPage setValue={setValue} setSelectedIndex={setSelectedIndex}/>}/>
+          <Route exact path="/Services" component={() => {return <h2>Services</h2>}}/>
+          <Route exact path="/Database" component={() => <Database />}/>
+          <Route exact path="/Storage" component={() => <Storage />}/>
+          <Route exact path="/Caching" component={() => {return <h2>Caching</h2>}}/>
           <Route exact path="/About" component={() => {return <h2>About</h2>}}/>
           <Route exact path="/Contact" component={() => {return <h2>Contact</h2>}}/>
         </Switch>
-        <div style={{height:"72vh"}}></div>
         <Footer value={value} selectedIndex={selectedIndex} setValue={setValue} setSelectedIndex={setSelectedIndex}/>
       </Router>
       

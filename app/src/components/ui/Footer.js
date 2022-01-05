@@ -40,11 +40,11 @@ export default function Footer(props){
                 </Grid>
                 <Grid item>
                     <Grid container direction="column" spacing={2}>
-                        <Grid item component={Link} to="/Products" classes={{root:classes.Link}} onClick={()=>{props.setValue(1)}}>Products</Grid>
+                        <Grid item component={Link} to="/Services" classes={{root:classes.Link}} onClick={()=>{props.setValue(1)}}>Services</Grid>
                         <Hidden mdDown>
-                        <Grid item component={Link} to="/Mobiles" classes={{root:classes.Link}} onClick={()=>{props.setValue(1);props.setSelectedIndex(0)}}>Mobiles</Grid>
-                        <Grid item component={Link} to="/Laptops" classes={{root:classes.Link}} onClick={()=>{props.setValue(1);props.setSelectedIndex(1)}}>Laptops</Grid>
-                        <Grid item component={Link} to="/Televisions" classes={{root:classes.Link}} onClick={()=>{props.setValue(1);props.setSelectedIndex(2)}}>Telivisions</Grid>
+                        <Grid item component={Link} to="/Database" classes={{root:classes.Link}} onClick={()=>{props.setValue(1);props.setSelectedIndex(0)}}>Database</Grid>
+                        <Grid item component={Link} to="/Storage" classes={{root:classes.Link}} onClick={()=>{props.setValue(1);props.setSelectedIndex(1)}}>Storage</Grid>
+                        <Grid item component={Link} to="/Caching" classes={{root:classes.Link}} onClick={()=>{props.setValue(1);props.setSelectedIndex(2)}}>Caching</Grid>
                         </Hidden>
                     </Grid>
                 </Grid>

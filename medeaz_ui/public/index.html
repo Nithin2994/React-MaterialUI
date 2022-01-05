@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/fontawesome.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script>
+  $('#top-search-specialists').owlCarousel({
+      loop:true,
+      margin:30,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:3,
+              nav:false
+          },
+          1000:{
+              items:4,
+              nav:true,
+              loop:false
+          }
+      }
+  })
+</script>
+<script>
+  $('#preventive-health').owlCarousel({
+      loop:true,
+      margin:30,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:3,
+              nav:false
+          },
+          1000:{
+              items:4,
+              nav:true,
+              loop:false
+          }
+      }
+  })
+</script>
+  </body>
+</html>

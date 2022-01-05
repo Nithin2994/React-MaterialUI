@@ -124,7 +124,7 @@ export default function Header(props) {
 
     const matched = useMediaQuery(theme.breakpoints.down("md"))
 
-    const menuItems = [{ to: "/Mobiles", name: "Mobiles" }, { to: "/Laptops", name: "Laptops" }, { to: "/Televisions", name: "Televisions" }]
+    const menuItems = [{ to: "/Database", name: "Database" }, { to: "/Storage", name: "Storage" }, { to: "/Caching", name: "Caching" }]
 
     const iOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
@@ -179,7 +179,7 @@ export default function Header(props) {
                     <ListItemText primary="Home" />
                 </ListItemButton>
                 <ListItemButton onClick={()=>{setOpenSublist(!openSubList)}} selected={props.value==1} classes={{ selected: classes.selectedListItem }}>
-                    <ListItemText primary="Products" />
+                    <ListItemText primary="Services" />
                     {openSubList ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={openSubList} timeout="auto" unmountOnExit>
@@ -239,20 +239,20 @@ export default function Header(props) {
             >
                 <Tab className={classes.tab} label="Home" component={Link} to="/" />
                 <Tab
-                    aria-owns={anchorEl ? "products-menu" : undefined}
+                    aria-owns={anchorEl ? "services-menu" : undefined}
                     aria-haspopup={anchorEl ? true : undefined}
                     onMouseOver={event => handleClick(event)}
                     className={classes.tab}
-                    label="Products"
+                    label="Services"
                     component={Link}
-                    to="/Products"
+                    to="/Services"
                 />
                 <Tab className={classes.tab} label="About" component={Link} to="/About" />
                 <Tab className={classes.tab} label="Contact Us" component={Link} to="/Contact" />
             </Tabs>
 
             <Menu
-                id="products-menu"
+                id="services-menu"
                 anchorEl={anchorEl}
                 open={open}
                 onClose={() => { handleClose(); props.setValue(1) }}
@@ -288,7 +288,7 @@ export default function Header(props) {
         <React.Fragment>
             <AppBar position="fixed" elevation={0} classes={{root:classes.appbar}}>
                 <Toolbar className={classes.toolbar}>
-                    <Typography classes={{ root: classes.brandName }}>Electronics</Typography>
+                    <Typography classes={{ root: classes.brandName }}>ServiceProvider</Typography>
                     {matched ? drawer : tabs}
                 </Toolbar>
             </AppBar>
